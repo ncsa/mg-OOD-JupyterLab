@@ -36,9 +36,9 @@ attributes:
     widget: "select"
     value: "magnus"
     options:
-            #      - ["debug","debug"]
-      - ["gpu-rh8","gpu-rh8"]
-      - ["magnus-rh8","magnus-rh8"]
+      - ["debug","debug"]
+      - ["gpu","gpu"]
+      - ["magnus","magnus"]
 
   bc_num_slots:
     label: "Number of CPUs"
