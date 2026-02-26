@@ -1,0 +1,21 @@
+<%- if ( ! user_context["bc_num_memory"].blank?) and
+    ( ( user_context["bc_num_memory"].downcase.end_with?('g') and user_context["bc_num_memory"][/[0-9]+/].to_i < 4 ) or
+      ( user_context["bc_num_memory"].downcase.end_with?('m') and user_context["bc_num_memory"][/[0-9]+/].to_i < 4096 ) or
+      ( user_context["bc_num_memory"].downcase.end_with?('k') and user_context["bc_num_memory"][/[0-9]+/].to_i < 4194304 ) ) %>
+
+<style>
+    .warning-box {
+        background-color: #fff3cd;
+        border: 1px solid #856404;
+        padding: 10px;
+        color: #856404;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+</style>
+
+<div class="warning-box">
+    <strong>Warning:</strong> Memory requested is below minimum. Submitting job with 4 GB of memory.
+</div>
+
+<%- end -%>

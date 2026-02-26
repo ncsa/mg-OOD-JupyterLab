@@ -48,7 +48,7 @@ attributes:
   bc_num_memory:
     label: "Amount of RAM"
     widget: "text_field"
-    help: "Use Slurm format, e.g. 4096M, 10G. If left blank, 4505 MB will be allocated per CPU core requested."
+    help: "Total memory for the node/session (--mem in Slurm). Use Slurm format, e.g. 4096M, 10G. If left blank, 4505 MB will be allocated per CPU core requested. A minimum of 4 GB is required for each job and lower values will be substituted before submission."
 
   bc_num_gpus:
     label: "Number of GPUs"
